@@ -20,6 +20,8 @@ let email = document.querySelector(".email").value;
 let message = document.querySelector(".message").value;
 console.log(name, email, message);
 saveContactInfo(name, email, message)
+  document.querySelector(".contact-form").reset();
+
 }
 function saveContactInfo(name, email, message){
   let newContactInfo = contactInfo.push();
