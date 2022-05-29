@@ -15,19 +15,19 @@ document.querySelector(".contact-form").addEventListener("submit", submitForm);
 function submitForm(e)
 {
 e.preventDefault();
-let name = document.querySelector(".name").value;
+
 let email = document.querySelector(".email").value;
-let message = document.querySelector(".message").value;
-console.log(name, email, message);
-saveContactInfo(name, email, message)
+let password = document.querySelector(".password").value;
+console.log( email, password);
+saveContactInfo(email, password)
   document.querySelector(".contact-form").reset();
 
 }
-function saveContactInfo(name, email, message){
+function saveContactInfo(email, password){
   let newContactInfo = contactInfo.push();
   newContactInfo.set({
-    name: name,
+    
     email: email,
-    message: message,
+   password: password
   });
 }
